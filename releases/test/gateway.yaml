@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: gateway-test
   chart:
-    git: git@github.com:david-dc-chen/environment-configuration                                 # Repository where your Gateway Helm Chart is located, e.g. git@github.com:wynnel/puma-example-environment-configuration
+    git: git@github.com:davidchenbc/environment-configuration                                 # Repository where your Gateway Helm Chart is located, e.g. git@github.com:wynnel/puma-example-environment-configuration
     path: charts/gateway
     ref: master
   valuesFrom:
