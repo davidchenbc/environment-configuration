@@ -1,0 +1,9 @@
+cassandraTesting:
+  keyspace: "Tester"
+  contactPoint: "Tester"
+  port: 9042
+  username: "gateway"
+  storedPasswordName: "test"
+  compression: "LZ4"
+  ssl: true
+  properties: {}

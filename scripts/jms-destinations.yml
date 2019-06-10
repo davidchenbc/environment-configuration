@@ -1,0 +1,45 @@
+sslssgautotestQueue1.out:
+  providerType: "TIBCO EMS"
+  initialContextFactoryClassName: "com.tibco.tibjms.naming.TibjmsInitialContextFactory"
+  jndiUrl: "tibjmsnaming://apim-qatibcomqssl.lvn.broadcom.net:7243"
+  jndiUsername: "sslssgautotest"
+  destinationType: "QUEUE"
+  connectionFactoryName: "ssgautotestQueueConnectionFactory"
+  destinationName: "sslssgautotestQueue1.out"
+  destinationUsername: "sslssgautotest"
+  outboundDetail:
+    replyType: "NO_REPLY"
+    useRequestCorrelationId: false
+    messageFormat: "AUTOMATIC"
+    poolingType: "SESSION"
+    sessionPoolingSettings:
+      size: 8
+      maxIdle: 8
+      maxWaitMs: 5000
+    template: false
+  additionalProperties:
+    com.tibco.tibjms.ssl.enable_verify_host: "com.l7tech.server.jms.prop.boolean.false"
+    com.tibco.tibjms.ssl.auth_only: "com.l7tech.server.jms.prop.boolean.true"
+    com.tibco.tibjms.naming.ssl_enable_verify_host: "com.l7tech.server.jms.prop.boolean.false"
+    com.tibco.tibjms.ssl.enable_verify_hostname: "com.l7tech.server.jms.prop.boolean.false"
+    com.l7tech.server.jms.prop.queue.ssgKeyAlias: "qatibcomqssl_client"
+    com.tibco.tibjms.naming.ssl_enable_verify_hostname: "com.l7tech.server.jms.prop.boolean.false"
+    com.l7tech.server.jms.prop.jndi.ssgKeyAlias: "qatibcomqssl_client"
+    com.tibco.tibjms.naming.security_protocol: "ssl"
+    com.tibco.tibjms.naming.ssl_auth_only: "com.l7tech.server.jms.prop.boolean.true"
+    com.l7tech.server.jms.prop.customizer.class: "com.l7tech.server.transport.jms.prov.TibcoConnectionFactoryCustomizer"
+jmsTesting:
+  initialContextFactoryClassName: "com.tibco.tibjms.naming.TibjmsInitialContextFactory"
+  jndiUrl: "tibjmsnaming://machinename:7222"
+  jndiUsername: "jndi-username"
+  jndiProperties:
+    some-name: "some-value"
+  destinationType: "QUEUE"
+  connectionFactoryName: "test-name"
+  destinationName: "dest-name"
+  outboundDetail:
+    replyType: "AUTOMATIC"
+    useRequestCorrelationId: false
+    messageFormat: "AUTOMATIC"
+    poolingType: "SESSION"
+    template: false

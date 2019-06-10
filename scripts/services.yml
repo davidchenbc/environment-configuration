@@ -1,0 +1,10 @@
+hi:
+  url: "/hi"
+  policy: "hi"
+  httpMethods:
+  - "DELETE"
+  - "POST"
+  - "GET"
+  - "PUT"
+  properties: {}
+  wssProcessingEnabled: false
