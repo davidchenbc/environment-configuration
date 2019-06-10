@@ -70,6 +70,8 @@ tolerations: []
 afinity: {}
 
 gateway:
+  adminUsername: "admin"
+  adminPassword: "7layer"
   heapSize: "3g"
   javaArgs: ""
   license:
