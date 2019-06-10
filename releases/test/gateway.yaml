@@ -9,8 +9,9 @@ metadata:
     flux.weave.works/tag.container: semver:*
 spec:
   releaseName: gateway-test
+  forceUpgrade: true
   chart:
-    git: git@github.com:davidchenbc/environment-configuration                                 # Repository where your Gateway Helm Chart is located, e.g. git@github.com:wynnel/puma-example-environment-configuration
+    git: git@github.com:davidchenbc/environment-configuration                                 # Repository where your Gateway Helm Chart is located, e.g. git@github.com:wynnel/puma-example-environment-configurations
     path: charts/gateway
     ref: master
   valuesFrom:
@@ -27,20 +28,18 @@ spec:
     replicaCount: 1
     container:
       image: docker.dev1.apimgcp.com/repository/docker-hosted/gateway     # Repository name, e.g docker.sandbox2.apimgcp.com
-      tag: '95'                                       # Image tag version, e.g 1.0
+      tag: 'v4'                                       # Image tag version, e.g 1.0
     imageCredentials:
       name: "docker.dev1.apimgcp.com"                                     # Repository name, e.g docker.sandbox2.apimgcp.com
       registry: "docker.dev1.apimgcp.com"                                 # Repository name, e.g docker.sandbox2.apimgcp.com
       username: "admin"                           # Repository login credential, e.g admin
     hazelcast:
       enabled: false
-    service:  
+    service:
       ports:
-        - name: http
-          internal: 8080
-          external: 80
-        - name: https
-          internal: 8443
-          external: 443
-
-
+      - name: http
+        internal: 8080
+        external: 80
+      - name: https
+        internal: 8443
+        external: 443

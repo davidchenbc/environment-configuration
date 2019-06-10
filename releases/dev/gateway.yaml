@@ -28,7 +28,7 @@ spec:
     replicaCount: 1
     container:
       image: docker.dev1.apimgcp.com/repository/docker-hosted/gateway     # Repository name, e.g docker.sandbox2.apimgcp.com
-      tag: '95'                                       # Image tag version, e.g 1.0
+      tag: 'v4'                                       # Image tag version, e.g 1.0
     imageCredentials:
       name: "docker.dev1.apimgcp.com"                                     # Repository name, e.g docker.sandbox2.apimgcp.com
       registry: "docker.dev1.apimgcp.com"                                 # Repository name, e.g docker.sandbox2.apimgcp.com
@@ -43,8 +43,3 @@ spec:
       - name: https
         internal: 8443
         external: 443
-
-
-
-
-
