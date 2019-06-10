@@ -1,0 +1,18 @@
+src3.yahoo.com:
+  verifyHostname: false
+  trustedForSsl: true
+  trustedAsSamlAttestingEntity: false
+  trustAnchor: false
+  revocationCheckingEnabled: true
+  trustedForSigningClientCerts: true
+  trustedForSigningServerCerts: true
+  trustedAsSamlIssuer: false
+apim-hugh-new.lvn.broadcom.net:
+  verifyHostname: false
+  trustedForSsl: true
+  trustedAsSamlAttestingEntity: true
+  trustAnchor: true
+  revocationCheckingEnabled: true
+  trustedForSigningClientCerts: true
+  trustedForSigningServerCerts: true
+  trustedAsSamlIssuer: true

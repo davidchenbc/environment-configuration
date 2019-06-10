@@ -1,0 +1,8 @@
+mysqlTesting:
+  driverClass: "com.l7tech.jdbc.mysql.MySQLDriver"
+  jdbcUrl: "jdbc:mysql://localhost:3306/ssg"
+  properties:
+    EnableCancelTimeout: "true"
+  user: "gateway"
+  minimumPoolSize: 3
+  maximumPoolSize: 15
