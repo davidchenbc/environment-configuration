@@ -1,4 +1,5 @@
 public-port:
   protocol: "HTTP"
-  port: 9999
-  enabledFeatures: []
+  port: 33333
+  enabledFeatures:
+  - "Published service message input"
