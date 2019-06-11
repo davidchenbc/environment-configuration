@@ -3,6 +3,7 @@ sslssgautotestQueue1.out:
   initialContextFactoryClassName: "com.tibco.tibjms.naming.TibjmsInitialContextFactory"
   jndiUrl: "tibjmsnaming://apim-qatibcomqssl.lvn.broadcom.net:7243"
   jndiUsername: "sslssgautotest"
+  jndiPasswordRef: "test"
   destinationType: "QUEUE"
   connectionFactoryName: "ssgautotestQueueConnectionFactory"
   destinationName: "sslssgautotestQueue1.out"

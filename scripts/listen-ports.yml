@@ -2,13 +2,3 @@ public-port:
   protocol: "HTTP"
   port: 9999
   enabledFeatures: []
-Default HTTP (8080):
-  protocol: "HTTP"
-  port: 8080
-  enabledFeatures:
-  - "Policy download service"
-  - "SNMP Query service"
-  - "Ping service"
-  - "WS-Trust security token service"
-  - "WSDL download service"
-  - "Published service message input"

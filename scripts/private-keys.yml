@@ -1,6 +1,8 @@
 qatibcomqssl_client:
   keystore: "Software DB"
   algorithm: "RSA"
+  keyPassword: "7layer"
 my:
   keystore: "Software DB"
   algorithm: "RSA"
+  keyPassword: "7layer"
