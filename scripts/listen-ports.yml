@@ -3,3 +3,26 @@ public-port:
   port: 33333
   enabledFeatures:
   - "Published service message input"
+my port:
+  protocol: "HTTPS"
+  port: 33445
+  enabledFeatures:
+  - "Published service message input"
+  tlsSettings:
+    clientAuthentication: "NONE"
+    privateKey:
+    enabledVersions:
+    - "TLSv1"
+    - "TLSv1.2"
+    - "TLSv1.1"
+    enabledCipherSuites:
+    - "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384"
+    - "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA"
+    - "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+    - "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+    properties:
+      usesTLS: true
+  properties:
+    threadPoolSize: "44"
+    requestSizeLimit: "2621440"
+  targetServiceReference: "example/hi"
