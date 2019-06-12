@@ -1,18 +1,8 @@
-tacoma:
-  type: "LDAP"
-  properties:
-    groupMaximumNesting: 5
-    groupCacheSize: 100
-    adminEnabled: false
-    groupMembershipCaseInsensitive: false
-    userCertificateUsage: "None"
-    userLookupByCertMode: "Common Name from Certificate"
-ldapTesting:
-  type: "LDAP"
-  properties:
-    groupMaximumNesting: 5
-    groupCacheSize: 100
-    adminEnabled: false
-    groupMembershipCaseInsensitive: false
-    userCertificateUsage: "None"
-    userLookupByCertMode: "Common Name from Certificate"
+simpleLDAP:
+  type: "BIND_ONLY_LDAP"
+  identityProviderDetail:
+    serverUrls:
+    - "ldap://smldap.l7tech.com:389"
+    useSslClientAuthentication: false
+    bindPatternPrefix: "cn="
+    bindPatternSuffix: ", dc=l7tech, dc=com"
