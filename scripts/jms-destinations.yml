@@ -8,6 +8,7 @@ sslssgautotestQueue1.out:
   connectionFactoryName: "ssgautotestQueueConnectionFactory"
   destinationName: "sslssgautotestQueue1.out"
   destinationUsername: "sslssgautotest"
+  destinationPasswordRef: "test"
   outboundDetail:
     replyType: "NO_REPLY"
     useRequestCorrelationId: false
@@ -33,6 +34,7 @@ jmsTesting:
   initialContextFactoryClassName: "com.tibco.tibjms.naming.TibjmsInitialContextFactory"
   jndiUrl: "tibjmsnaming://machinename:7222"
   jndiUsername: "jndi-username"
+  jndiPassword: "7layer"
   jndiProperties:
     some-name: "some-value"
   destinationType: "QUEUE"
