@@ -5,7 +5,7 @@ metadata:
   name: gateway-test
   namespace: test
   annotations:
-    flux.weave.works/automated: "true"
+    flux.weave.works/automated: "false"
     flux.weave.works/tag.container: semver:*
 spec:
   releaseName: gateway-test
@@ -28,7 +28,7 @@ spec:
     replicaCount: 1
     container:
       image: docker.dev1.apimgcp.com/repository/docker-hosted/gateway     # Repository name, e.g docker.sandbox2.apimgcp.com
-      tag: '1012'                                      # Image tag version, e.g 1.0
+      tag: '1011'                                      # Image tag version, e.g 1.0
     imageCredentials:
       name: "docker.dev1.apimgcp.com"                                     # Repository name, e.g docker.sandbox2.apimgcp.com
       registry: "docker.dev1.apimgcp.com"                                 # Repository name, e.g docker.sandbox2.apimgcp.com
