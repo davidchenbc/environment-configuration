@@ -26,7 +26,7 @@ function format_json () {
         if [[ $line = \{* || $line = \}* ]]; then
             :
         elif [[ $line =~ ^[[:space:]][[:space:]]\" ]]; then
-            line=`echo $line | sed 's/[^0-9A-Za-z.]*//g'`
+            line=`echo $line | cut -d'"' -f2`
             line="$1.$line: '{"
             echo "$line"
         elif [[ $line = [[:space:]][[:space:]]\} || $line = [[:space:]][[:space:]]\}\, ]]; then
@@ -75,11 +75,14 @@ function format_cert_file () {
     for ENTRY in "certificates/"*
     do
         name=$(echo "$ENTRY" | awk -F '/' '{print $2}')
-        echo "ENV.CERTIFICATE_FILE.$name: |-" >> "$tempFile"
-        cat "$ENTRY" | sed 's/^/    /' >> "$tempFile"
+        echo "ENV.CERTIFICATE_FILE.$name: |-" > "$tempFile"
+        grep . "$ENTRY" | while IFS= read -r line
+        do
+            echo "    $line"
+        done >> "$tempFile"
+        cat "$tempFile" | sed 's/^/    /' >> "$OUT"
     done
 
-    cat "$tempFile" | sed 's/^/    /' >> "$OUT"
     rm "$tempFile"
 }
 
@@ -101,7 +104,7 @@ echo "    ENV.CONTEXT_VARIABLE_PROPERTY.influxdb.tags: \"env=dev\"" >> "$OUT"
 if [ -f "../releases/$namespace/privateKeys.yaml" ]; then
     rm "../releases/$namespace/privateKeys.yaml"
 fi
-if [[ ! -z $(kubectl get SealedSecrets -n "$namespace" | grep gateway-private-keys) ]]; then 
+if [[ ! -z $(kubectl get SealedSecrets -n "$namespace" | grep gateway-private-keys) ]]; then
         kubectl delete SealedSecrets gateway-private-keys -n "$namespace" > /dev/null
     fi
 
@@ -146,9 +149,17 @@ do
         "certificates")
             format_cert_file
             ;;
-        # Environment Properties
-        "env.properties")
+        # Global Environment Properties
+        "global-env.properties")
             format_properties "ENV.PROPERTY"
+            ;;
+        # Context Environment Properties
+        "context-env.properties")
+            format_properties "ENV.CONTEXT_VARIABLE_PROPERTY"
+            ;;
+        # Service Environment Properties
+        "service-env.properties")
+            format_properties "ENV.SERVICE_PROPERTY"
             ;;
         # Stored Passwords
         "stored-passwords.properties")
@@ -193,9 +204,17 @@ do
         "certificates")
             format_cert_file
             ;;
-        # Environment Properties
-        "env.properties")
+        # Global Environment Properties
+        "global-env.properties")
             format_properties "ENV.PROPERTY"
+            ;;
+        # Context Environment Properties
+        "context-env.properties")
+            format_properties "ENV.CONTEXT_VARIABLE_PROPERTY"
+            ;;
+        # Service Environment Properties
+        "service-env.properties")
+            format_properties "ENV.SERVICE_PROPERTY"
             ;;
         # Stored Passwords
         "stored-passwords.properties")
