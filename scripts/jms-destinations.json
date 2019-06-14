@@ -3,6 +3,7 @@
     "initialContextFactoryClassName" : "com.tibco.tibjms.naming.TibjmsInitialContextFactory",
     "jndiUrl" : "tibjmsnaming://machinename:7222",
     "jndiUsername" : "jndi-username",
+    "jndiPassword" : "7layer",
     "jndiProperties" : {
       "some-name" : "some-value"
     },

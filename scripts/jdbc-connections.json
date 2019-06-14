@@ -2,7 +2,7 @@
   "mysqlTesting" : {
     "driverClass" : "com.l7tech.jdbc.mysql.MySQLDriver",
     "jdbcUrl" : "jdbc:mysql://localhost:3306/ssg",
-    "password": "7layer",
+    "password" : "7layer",
     "properties" : {
       "EnableCancelTimeout" : "true"
     },
@@ -13,7 +13,7 @@
   "myJDBC" : {
     "driverClass" : "com.mysql.jdbc.Driver",
     "jdbcUrl" : "jdbc:mysql://testdavid.gateway.com:3306/ssg",
-    "passwordRef": "test",
+    "passwordRef" : "test",
     "properties" : {
       "EnableCancelTimeout" : "true"
     },
