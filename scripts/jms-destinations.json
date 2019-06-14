@@ -1,0 +1,20 @@
+{
+  "jmsTesting" : {
+    "initialContextFactoryClassName" : "com.tibco.tibjms.naming.TibjmsInitialContextFactory",
+    "jndiUrl" : "tibjmsnaming://machinename:7222",
+    "jndiUsername" : "jndi-username",
+    "jndiProperties" : {
+      "some-name" : "some-value"
+    },
+    "destinationType" : "QUEUE",
+    "connectionFactoryName" : "test-name",
+    "destinationName" : "dest-name",
+    "outboundDetail" : {
+      "replyType" : "AUTOMATIC",
+      "useRequestCorrelationId" : false,
+      "messageFormat" : "AUTOMATIC",
+      "poolingType" : "SESSION",
+      "template" : false
+    }
+  }
+}

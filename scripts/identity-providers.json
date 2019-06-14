@@ -1,0 +1,20 @@
+{
+  "simpleLDAP" : {
+    "type" : "BIND_ONLY_LDAP",
+    "identityProviderDetail" : {
+      "serverUrls" : [ "ldap://smldap.l7tech.com:389" ],
+      "useSslClientAuthentication" : false,
+      "bindPatternPrefix" : "cn=",
+      "bindPatternSuffix" : ", dc=l7tech, dc=com"
+    }
+  },
+  "SecondsimpleLDAP" : {
+    "type" : "BIND_ONLY_LDAP",
+    "identityProviderDetail" : {
+      "serverUrls" : [ "ldap://secondsmldap.l7tech.com:389" ],
+      "useSslClientAuthentication" : false,
+      "bindPatternPrefix" : "cn=",
+      "bindPatternSuffix" : ", dc=l7tech, dc=com"
+    }
+  }
+}

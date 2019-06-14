@@ -1,0 +1,10 @@
+{
+  "qatibcomqssl_client" : {
+    "keystore" : "Software DB",
+    "algorithm" : "RSA"
+  },
+  "my" : {
+    "keystore" : "Software DB",
+    "algorithm" : "RSA"
+  }
+}

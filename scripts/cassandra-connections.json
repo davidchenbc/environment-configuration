@@ -1,0 +1,24 @@
+{
+  "SecondCassandra" : {
+    "keyspace" : "Tester",
+    "contactPoint" : "Tester",
+    "port" : 9045,
+    "username" : "gateway",
+    "storedPasswordName" : "siteminder12_password",
+    "compression" : "LZ4",
+    "ssl" : true,
+    "properties" : {
+      "readTimeoutMillis" : "12000"
+    }
+  },
+  "cassandraTesting" : {
+    "keyspace" : "Tester",
+    "contactPoint" : "Tester",
+    "port" : 9042,
+    "username" : "gateway",
+    "storedPasswordName" : "test",
+    "compression" : "LZ4",
+    "ssl" : true,
+    "properties" : { }
+  }
+}
