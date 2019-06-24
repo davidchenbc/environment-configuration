@@ -27,13 +27,13 @@ spec:
   values:
     replicaCount: 1
     container:
-      image: daviddockerhub/gateway
+      image: docker.io/daviddockerhub/gateway
       tag: '1'
 #      image: docker.dev1.apimgcp.com/repository/docker-hosted/gateway     # Repository name, e.g docker.sandbox2.apimgcp.com
 #      tag: '1037'                                      # Image tag version, e.g 1.0
     imageCredentials:
       name: "dockerhub.test"                                     # Repository name, e.g docker.sandbox2.apimgcp.com
-      registry: "docker.com"                                 # Repository name, e.g docker.sandbox2.apimgcp.com
+      registry: "https://index.docker.io/v1/"                                 # Repository name, e.g docker.sandbox2.apimgcp.com
       username: "daviddockerhub"                           # Repository login credential, e.g admin
       password: 'DoDavid77'
     hazelcast:
