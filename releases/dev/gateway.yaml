@@ -32,10 +32,11 @@ spec:
       tag: '1'
 #      image: docker.dev1.apimgcp.com/repository/docker-hosted/gateway     # Repository name, e.g docker.sandbox2.apimgcp.com
 #      tag: '1037'                                      # Image tag version, e.g 1.0
-#    imageCredentials:
-#      name: "docker.dev1.apimgcp.com"                                     # Repository name, e.g docker.sandbox2.apimgcp.com
-#      registry: "docker.dev1.apimgcp.com"                                 # Repository name, e.g docker.sandbox2.apimgcp.com
-#      username: "admin"                           # Repository login credential, e.g admin
+    imageCredentials:
+      name: dockerhub #"docker.dev1.apimgcp.com"                                     # Repository name, e.g docker.sandbox2.apimgcp.com
+      registry: "registry.hub.docker.com"                                 # Repository name, e.g docker.sandbox2.apimgcp.com
+      username: "daviddockerhub"                           # Repository login credential, e.g admin
+      password: "DoDavid77"
     hazelcast:
       enabled: false
     service:
