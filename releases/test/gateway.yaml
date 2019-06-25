@@ -7,7 +7,7 @@ metadata:
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.container: semver:*
-    flux.weave.works/ignore: "true"
+#    flux.weave.works/ignore: "true"
 spec:
   releaseName: gateway-test
   forceUpgrade: true
