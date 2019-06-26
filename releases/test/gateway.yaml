@@ -38,7 +38,7 @@ spec:
       username: "daviddockerhub"                           # Repository login credential, e.g admin
       password: 'DoDavid77'
     hazelcast:
-      enabled: false
+      enabled: true
     service:
       ports:
       - name: http
