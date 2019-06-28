@@ -16,15 +16,15 @@ spec:
     path: charts/gateway
     ref: master
   valuesFrom:
-  - secretKeyRef:
-      name: image-creds
-      key: image-creds.yaml
-  - secretKeyRef:
-      name: gateway-license
-      key: license.yaml
-  - secretKeyRef:
-      name: env
-      key: env.yaml
+    - secretKeyRef:
+        name: image-creds
+        key: image-creds.yaml
+    - secretKeyRef:
+        name: gateway-license
+        key: license.yaml
+    - secretKeyRef:
+        name: env
+        key: env.yaml
   values:
     replicaCount: 1
     container:
@@ -41,9 +41,9 @@ spec:
       enabled: true
     service:
       ports:
-      - name: http
-        internal: 8080
-        external: 80
-      - name: https
-        internal: 8443
-        external: 443
+        - name: http
+          internal: 8080
+          external: 80
+        - name: https
+          internal: 8443
+          external: 443
