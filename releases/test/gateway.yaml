@@ -31,9 +31,9 @@ spec:
 #      image: docker.io/daviddockerhub/gateway
 #      tag: '1'
       image: docker.dev1.apimgcp.com/repository/docker-hosted/gateway     # Repository name, e.g docker.sandbox2.apimgcp.com
-      tag: '2'                                      # Image tag version, e.g 1.0
+      tag: '4'                                      # Image tag version, e.g 1.0
     imageCredentials:
-      name: "docker.dev1.apimgcp.com" 
+      name: "docker.dev1.apimgcp.com"
       registry: "docker.dev1.apimgcp.com"
       username: "admin"
       password: "password"
